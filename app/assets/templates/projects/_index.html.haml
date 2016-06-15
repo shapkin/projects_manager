@@ -1,0 +1,6 @@
+%h2
+  Projects
+  %a.pull-right.big_text{ href: '' } +
+%p{ 'ng-repeat' => "project in projects | orderBy: 'name'"}
+  %a{ href: '' }
+    {{project.name}}

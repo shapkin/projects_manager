@@ -9,5 +9,5 @@
   %body{ 'ng-app' => 'projectsManager' }
     %base{ href: '/' }
     .container
-      = render 'layouts/header'
+      %div{ 'ng-include' => "'_nav.html'" }
       = yield

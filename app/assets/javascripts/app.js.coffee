@@ -1,1 +1,1 @@
-angular.module('projectsManager', ['ui.router', 'templates', 'restangular'])
+angular.module('projectsManager', ['ui.router', 'templates', 'restangular', 'Devise'])

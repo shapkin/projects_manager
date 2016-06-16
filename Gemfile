@@ -5,6 +5,9 @@ gem 'rails', '4.2.6'
 
 # authentication
 gem 'devise', '3.5.6'
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
 
 # markup
 gem 'haml-rails'

@@ -1,0 +1,19 @@
+.header.clearfix
+  %nav
+    %ul.nav.nav-pills.pull-right{ 'ng-controller' => 'NavigationController' }
+      %li
+        %a{ href: '/' } Dashboard
+      %li{ 'ng-hide' => 'signedIn()' }
+        %a{ href: '#/login'} Log In
+      %li{ 'ng-show' => 'signedIn()' }
+        %a{ href: '#/projects' } Projects
+      %li{ 'ng-show' => 'signedIn()' }
+        %a{ href: '#/home' }
+          {{user.first_name}}
+          {{user.last_name}}
+      %li{ 'ng-show' => 'signedIn()' }
+        %a{ 'ng-click' => 'logout()' } Log Out
+  %h3.text-muted.app-name
+    %span
+      = image_tag 'beta-label.png'
+      Projects Manager

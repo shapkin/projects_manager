@@ -6,6 +6,7 @@
 //= require angular-ui-router.min
 //= require restangular.min
 //= require angular-rails-templates
+//= require angular-devise
 
 //= require bootstrap.min
 

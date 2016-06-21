@@ -6,8 +6,8 @@
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body{ 'ng-app' => 'projectsManager' }
+  %body{ data: { ng_app: 'projectsManager' }}
     %base{ href: '/' }
     .container
-      %div{ 'ng-include' => "'_nav.html'" }
+      %div{ data: { ng_include: "'_nav.html'" }}
       = yield

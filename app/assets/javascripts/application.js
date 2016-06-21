@@ -10,6 +10,7 @@
 
 //= require bootstrap.min
 
+//= require app
+//= require routes
 //= require_tree ../templates
-//= require_tree .
 //= require_tree ./controllers

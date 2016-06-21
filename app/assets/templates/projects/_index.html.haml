@@ -1,6 +1,15 @@
-%h2
-  Projects
-  %a.pull-right.big_text{ href: '' } +
-%p{ 'ng-repeat' => "project in projects | orderBy: 'name'"}
-  %a{ href: '' }
-    {{project.name}}
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Projects
+      %th{ style: 'text-align: right;' }
+        %a{ href: '#/projects/new' } + Add
+  %tbody
+    %tr{ data: { ng_repeat: "project in projects | orderBy: 'name'", ng_show: 'projects.length' }}
+      %td
+        {{project.name}}
+      %td
+    %tr{ data: { ng_hide: 'projects.length' }}
+      %td.text-center{ colspan: 2}
+        No Projects

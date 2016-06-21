@@ -4,6 +4,7 @@ angular.module('projectsManager').config ['$stateProvider', '$urlRouterProvider'
 
   $stateProvider.state 'home', { url: '/home', controller: 'HomeController', templateUrl: '_home.html' }
     .state 'projects', { url: '/projects', controller: 'ProjectsController', templateUrl: 'projects/_index.html' }
+    .state 'new_project', { url: '/projects/new', controller: 'ProjectsController', templateUrl: 'projects/_new.html' }
     .state 'login', { url: '/login', templateUrl: 'auth/_login.html', controller: 'AuthController' }
     .state 'register', {
       url: '/register',
@@ -17,3 +18,6 @@ angular.module('projectsManager').config ['$stateProvider', '$urlRouterProvider'
 
   $urlRouterProvider.otherwise('home')
 ]
+
+angular.module('projectsManager').config (RestangularProvider) ->
+  RestangularProvider.setRequestSuffix('.json')
